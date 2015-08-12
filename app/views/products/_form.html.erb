@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.select :category_id, Category.all.map{ |c| [c.title,c.id] } %>
+    <%= f.select :category_id, Category.all.map{ |c| [c.title,c.id] }, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
