@@ -7,4 +7,5 @@ class Product < ActiveRecord::Base
   #has_many :news_products, :dependent => :destroy
   #has_many :news, :through => :news_products
   has_and_belongs_to_many :news
+  has_many :features
 end
