@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813152320) do
+ActiveRecord::Schema.define(version: 20150813155231) do
 
   create_table "asset_manager_asset_associations", force: :cascade do |t|
     t.string   "owner_type"
@@ -152,6 +152,10 @@ ActiveRecord::Schema.define(version: 20150813152320) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "surname"
+    t.date     "date_of_birth"
+    t.boolean  "is_male"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
