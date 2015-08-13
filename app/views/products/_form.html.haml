@@ -1,0 +1,9 @@
+= semantic_form_for @product do |f|
+  = f.input :title
+  = f.input :description
+  = f.input :category_id, as: :select, collection: Category.all.map{ |c| [c.title,c.id] }, include_blank: true
+  = f.action :submit
+
+= semantic_form_for @product do |f|
+  = f.inputs
+  = f.action :submit
