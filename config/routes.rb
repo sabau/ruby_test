@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount AssetManager::Engine => '/asset_manager'
   resources :news
   get 'welcome/index'
   resources :categories

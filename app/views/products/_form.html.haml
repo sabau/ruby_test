@@ -3,6 +3,8 @@
     = f.input :title
     = f.input :description, input_html: { rows: 3 }
     = f.input :category_id, as: :select, collection: Category.all.map{ |c| [c.title,c.id] }, include_blank: true
+    = f.input :main_image, as: :asset_manager
+
   #features
     %h3 Features
     = f.semantic_fields_for :features do |feature|
