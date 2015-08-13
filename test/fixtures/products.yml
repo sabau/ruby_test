@@ -3,7 +3,14 @@
 one:
   title: MyString
   description: MyText
+  category_id: 1
 
 two:
   title: MyString
   description: MyText
+  category_id: 1
+
+three:
+  title: MyString
+  description: MyText
+  category_id: 2
