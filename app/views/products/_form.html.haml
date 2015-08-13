@@ -1,5 +1,14 @@
 = semantic_form_for @product do |f|
-  = f.input :title
-  = f.input :description
-  = f.input :category_id, as: :select, collection: Category.all.map{ |c| [c.title,c.id] }, include_blank: true
-  = f.action :submit
+  = f.inputs do
+    = f.input :title
+    = f.input :description, input_html: { rows: 3 }
+    = f.input :category_id, as: :select, collection: Category.all.map{ |c| [c.title,c.id] }, include_blank: true
+  #features
+    %h3 Features
+    = f.semantic_fields_for :features do |feature|
+      = render 'feature_fields', :f => feature
+    .links
+      = link_to_add_association 'Add Feature', f, :features
+
+  = f.actions do
+    = f.action :submit
