@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount AssetManager::Engine => '/asset_manager'
   resources :news
   get 'welcome/index'

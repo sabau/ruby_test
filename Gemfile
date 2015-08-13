@@ -29,6 +29,7 @@ gem 'formtastic', '~> 3.0'
 gem 'formtastic-bootstrap'
 gem 'cocoon'
 gem 'intesys_asset_manager', git: 'https://github.com/intesys/asset_manager.git', branch: 'rails4'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
