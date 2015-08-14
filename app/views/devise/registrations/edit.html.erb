@@ -14,10 +14,9 @@
   </div>
 
   <div class="field">
-    <%= f.radio_button :is_male, true, :checked => true %>
-    <%= label :gender_male, :is_male, "Male" %>
-    <%= f.radio_button :is_male, false %>
-    <%= label :gender_female, :is_male, "Female" %>
+    <%= f.label "Gender" %><br />
+    <div><%= f.radio_button :is_male, true %> <%= f.label :is_male, "Male" %> </div>
+    <div><%= f.radio_button :is_male, false %> <%= f.label :is_male, "Female" %> </div>
   </div>
 
   <div class="field">
