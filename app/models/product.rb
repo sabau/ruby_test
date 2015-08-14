@@ -15,6 +15,6 @@ class Product < ActiveRecord::Base
   has_image :main_image
   has_images :gallery
 
-  translates :title, :description
+  translates :title, :description, fallbacks_for_empty_translations: true
 
 end
