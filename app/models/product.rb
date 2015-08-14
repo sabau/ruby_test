@@ -15,4 +15,6 @@ class Product < ActiveRecord::Base
   has_image :main_image
   has_images :gallery
 
+  translates :title, :description
+
 end

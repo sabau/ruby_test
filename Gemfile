@@ -31,6 +31,7 @@ gem 'cocoon'
 gem 'intesys_asset_manager', git: 'https://github.com/intesys/asset_manager.git', branch: 'rails4'
 gem 'devise'
 gem 'fancybox2-rails', '~> 0.2.8'
+gem 'globalize', '~> 5.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813155231) do
+ActiveRecord::Schema.define(version: 20150814130606) do
 
   create_table "asset_manager_asset_associations", force: :cascade do |t|
     t.string   "owner_type"
@@ -109,9 +109,19 @@ ActiveRecord::Schema.define(version: 20150813155231) do
   add_index "news_products", ["news_id"], name: "index_news_products_on_news_id"
   add_index "news_products", ["product_id"], name: "index_news_products_on_product_id"
 
-  create_table "products", force: :cascade do |t|
+  create_table "product_translations", force: :cascade do |t|
+    t.integer  "product_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "title"
     t.text     "description"
+  end
+
+  add_index "product_translations", ["locale"], name: "index_product_translations_on_locale"
+  add_index "product_translations", ["product_id"], name: "index_product_translations_on_product_id"
+
+  create_table "products", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
