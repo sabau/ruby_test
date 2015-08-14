@@ -13,5 +13,6 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :features, reject_if: :all_blank, allow_destroy: true
 
   has_image :main_image
+  has_images :gallery
 
 end

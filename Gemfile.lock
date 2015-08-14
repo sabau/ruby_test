@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/intesys/asset_manager.git
-  revision: 96b3fff8d38bc4d2662e0f2ee2da9acd947c549a
+  revision: 49ae2e82382356338b4bf8f3e5ba9c7c3410ed27
   branch: rails4
   specs:
     intesys_asset_manager (1.2.3.3)
@@ -102,6 +102,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.5.2)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     formtastic (3.1.3)
       actionpack (>= 3.2.13)
     formtastic-bootstrap (3.1.1)
@@ -202,7 +204,7 @@ GEM
       rdoc (~> 4.0)
     sexp_processor (4.6.0)
     spring (1.3.6)
-    sprockets (3.2.0)
+    sprockets (3.3.0)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)
@@ -236,6 +238,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   debugger
   devise
+  fancybox2-rails (~> 0.2.8)
   formtastic (~> 3.0)
   formtastic-bootstrap
   haml-rails (~> 0.9)
