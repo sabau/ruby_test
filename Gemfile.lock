@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/intesys/asset_manager.git
-  revision: 49ae2e82382356338b4bf8f3e5ba9c7c3410ed27
+  revision: f1d72e2111a63904e4ee237299ebfe2c16d65b4a
   branch: rails4
   specs:
     intesys_asset_manager (1.2.3.3)

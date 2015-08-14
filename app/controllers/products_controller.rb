@@ -70,7 +70,7 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       #abort params.inspect
-      params.require(:product).permit(:title, :description, :category_id, :main_image_id, gallery_ids: [], features_attributes: [:id, :name, :description, :_destroy ] )
+      params.require(:product).permit([:title, :description, :category_id, features_attributes: [:id, :name, :description, :_destroy ]] + Product.am_permit_fields )
       #abort params.inspect
     end
 end
