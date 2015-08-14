@@ -32,4 +32,16 @@ permit_params :title, :description, :date, product_ids: []
     active_admin_comments
   end
 
+  index do
+    selectable_column
+    column :id
+    column :title
+    column :date
+
+    column :products do |n|
+      raw n.products.map{ |p| p.title }.join('<br>')
+    end
+
+    actions
+  end
 end
